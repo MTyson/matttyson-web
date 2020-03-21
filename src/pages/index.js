@@ -181,7 +181,7 @@ const Main = ({ className, data }) => {
   const [ navSize, setNavSize ] = useState(navSizeNum+"px");
   const [ halfNavSize, setHalfNavSize ] = useState((navSizeNum / 2) + "px");
 
-  const [ navScale, setNavScale ] = useState(2);
+  const [ navScale, setNavScale ] = useState(1);
 
   const [ flipCard, setFlipCard ] = useState(true);
 
@@ -193,17 +193,42 @@ const Main = ({ className, data }) => {
   const onChildClick = () => {
     setNavScale(1.25);
     setTimeout(function(){
-	  setNavScale(1);
-	},500);
+      setNavScale(1);
+    },500);
   }
-
+  
+  const navKeyListener = (e) => {
+    console.log('keycode: ' + e.keyCode);
+    
+    if (e.keyCode == 36 || e.keyCode == 103){ e.preventDefault(); navigate('up-left'); return false; }
+    if (e.keyCode == 99 || e.keyCode == 34){ e.preventDefault(); navigate('down-right'); return false; }
+    if (e.keyCode == 109 || e.keyCode == 32){ e.preventDefault(); navigate('right'); return false; }
+    if (e.keyCode == 98 || e.keyCode == 40){ e.preventDefault(); navigate('down'); return false; }
+    if (e.keyCode == 37 || e.keyCode == 100){ e.preventDefault(); navigate('left'); return false;}
+    if (e.keyCode == 39 || e.keyCode == 102){ e.preventDefault(); navigate('right'); return false;}
+    if (e.keyCode == 38 || e.keyCode == 104){ e.preventDefault(); navigate('up'); return false; }
+    if (e.keyCode == 97 || e.keyCode == 35){ e.preventDefault(); navigate('down-left'); return false; }
+    if (e.keyCode == 33 || e.keyCode == 105){ e.preventDefault(); navigate('up-right'); return false; }
+    
+    if (e.keyCode == 12 || e.keyCode == 101){ e.preventDefault(); setFlipCard(!flipCard); return false; }
+    
+    return true;
+  }
+  
+  useEffect(function(){
+    document.addEventListener("keydown", navKeyListener, false);
+    return () => {
+      document.removeEventListener("keydown", navKeyListener);
+    } 
+  }, []);
+  
   const navigate = (whereTo) => {
     setFlipCard(true);
     let newX = positionX; let newY = positionY; let newOrd = ordinalPostion;
+    
   	switch(whereTo) {
   		case 'up-left':
   		  newX = positionX+100; newY = positionY+100; newOrd = ordinalPostion-4;
-        setNavScale(3);
   		break;
   		case 'up':
   	    newY = positionY+100; newOrd = ordinalPostion-3;
@@ -248,9 +273,16 @@ const Main = ({ className, data }) => {
   		//
   	}
     console.log(newX + " x " + newY)
-    if (newX >= -200 && newX <= 0 && newY <= 0 && newY >= -200){
-      setPositionX(newX); setPositionY(newY); setOrdinalPosition(newOrd);
-    } // else: navigating outside bounds
+    setNavScale(.80); 
+    setTimeout(() => {
+      if (newX >= -200 && newX <= 0 && newY <= 0 && newY >= -200){
+        setPositionX(newX); setPositionY(newY); setOrdinalPosition(newOrd);
+      } // else: navigating outside bounds
+      setTimeout(() => {
+        setNavScale(1); 
+      },250)
+    },250)
+
   }
   const onNav = (whereTo) => navigate(whereTo);
 
@@ -262,9 +294,9 @@ const Main = ({ className, data }) => {
   return (
     <motion.div id="the-big-picture" style={{width: '310vw', height: '310vh', position: "absolute", display:'flex',
 		  flexDirection:'row', flexWrap: 'wrap', justifyContent:`start`,alignItems:`start`, overflow:`hidden`, alignContent:`start`,
-		  left:`${ positionX }vw`, top:`${ positionY }vh`}} initial={{ scale: 0 }}
-		  animate={{left:`${ positionX }vw`, top:`${ positionY }vh`, scale:1 }} transition={{ mass: 1, type: "spring" }}
-      onKeyPress={alert('ok');}>
+		  left:`${ positionX }vw`, top:`${ positionY }vh`}} initial={{ scale: .5 }}
+		  animate={{left:`${ positionX }vw`, top:`${ positionY }vh`, scale:navScale }} transition={{ mass: 1, type: "spring" }}
+      onDrag={ (event, info) => { alert('drag'); console.log(info.point.x, info.point.y) } } onClick={(e)=>{}}>
 
       <Yogi data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="1" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
   	  <Belinda data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="2" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
