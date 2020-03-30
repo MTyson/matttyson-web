@@ -62,14 +62,14 @@ const Unicorn = ({ className, data, onNav, flipCard, onFlip }) => {
 				    imgStyle={{ objectFit: "contain" }} />
         </div>
     		<div>
-    		   <div className="flip-back" style={{ boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
+    		   <div className="flip-back darker" style={{ boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
     			     border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
     			  <h3 style={{fontFamily: "garamond"}}>Matt Tyson</h3>
             <p>(Hates to have his picture taken.)</p>
-    			  <p>CEO of <a href="www.wholisticsoftware.com" target="_blank">Wholistic Software</a></p>
-    			  <p>CTO at <a href="www.darkhorse.tech" target="_blank">Dark Horse Group</a></p>
+    			  <p>CEO of <a href="www.wholisticsoftware.com" target="_blank" onClick={(e)=>{e.stopPropagation()}}>Wholistic Software</a></p>
+    			  <p>CTO at <a href="www.darkhorse.tech" target="_blank" onClick={(e)=>{e.stopPropagation()}}>Dark Horse Group</a></p>
     			  <p>Built this site to test out the (experimental) navigation and animation.</p>
-            <p>Writes for JavaWorld and Medium.</p>
+            <p>Writes for <a href="#" target="_blank" onClick={(e)=>{e.stopPropagation(); e.preventDefault(); onNav("south"); return false;}}>JavaWorld</a> and <a href="#" target="_blank" onClick={(e)=>{e.stopPropagation(); e.preventDefault(); onNav("medium"); return false;}}>Medium</a>.</p>
             <p>Lives in Big Sur.</p>
             <p><a href="mailto:matthewcarltyson@gmail.com">matthewcarltyson@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/matt444/" target="_blank" onClick={(e)=>{e.stopPropagation()}}>matt444</a></p>

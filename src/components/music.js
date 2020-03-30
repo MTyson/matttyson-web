@@ -38,7 +38,7 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
 				imgStyle={{ objectFit: "cover" }} />
             </div>
 			<div>
-			   <div className="flip-back" style={{
+			   <div className="flip-back darker" style={{
 				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
 				  <p>Guitar and songwriting helps keep me sane (especially when sheltering in place :)</p>

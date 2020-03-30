@@ -108,7 +108,7 @@ export const query = graphql`
         }
       }
     },
-    apple: file(relativePath: { eq: "apple.jpg" }) {
+    apple: file(relativePath: { eq: "javaworld2.jpg" }) {
       childImageSharp {
         fixed(width:301){
           ...GatsbyImageSharpFixed
@@ -170,7 +170,21 @@ export const query = graphql`
           ...GatsbyImageSharpFixed
         }
       }
-    }
+    },
+    javaworldBg: file(relativePath: { eq: "javaworld-bg.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    javaworld: file(relativePath: { eq: "javaworld2.jpg" }) {
+      childImageSharp {
+        fixed(width:301){
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },
   }
 `
 
@@ -270,6 +284,12 @@ const Main = ({ className, data }) => {
       break;
       case 'darkhorse':
         newX = 0; newY = 0; newOrd = 1;
+      break;
+      case 'medium':
+        newX = -100; newY = 0; newOrd = 1;
+      break;
+      case 'south':
+        newX = -100; newY = -200; newOrd = 1;
       break;
   		default:
   		//
