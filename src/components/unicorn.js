@@ -68,7 +68,8 @@ const Unicorn = ({ className, data, onNav, flipCard, onFlip }) => {
             <p>(Hates to have his picture taken.)</p>
     			  <p>CEO of <a href="www.wholisticsoftware.com" target="_blank">Wholistic Software</a></p>
     			  <p>CTO at <a href="www.darkhorse.tech" target="_blank">Dark Horse Group</a></p>
-    			  <p>Built this site as an experiment to see if the navigation and animation will work.</p>
+    			  <p>Built this site to test out the (experimental) navigation and animation.</p>
+            <p>Writes for JavaWorld and Medium.</p>
             <p>Lives in Big Sur.</p>
             <p><a href="mailto:matthewcarltyson@gmail.com">matthewcarltyson@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/matt444/" target="_blank" onClick={(e)=>{e.stopPropagation()}}>matt444</a></p>

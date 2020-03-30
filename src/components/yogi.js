@@ -39,7 +39,7 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
 		window.emailjs.init("user_4oDwty2PIsJhhdqS2Hyre")
 	}, []);
 	return (
-		<BackgroundImage Tag="section" className={className} fluid={data.georgeBg.childImageSharp.fluid} backgroundColor={`#E8D195`}
+		<BackgroundImage Tag="section" className={className} fluid={data.yogiBg.childImageSharp.fluid} backgroundColor={`#E8D195`}
 			style={{
 				height: '100vh', width: `100vw`, display: `flex`, justifyContent: `center`, alignItems: `center`, backgroundSize: 'cover',
 				backgroundPosition: 'center center'

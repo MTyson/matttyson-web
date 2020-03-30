@@ -44,7 +44,7 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
 				  <p>It's pretty easy to pass over The Beatles as over-exposed.</p>
 				  <p>To me, more than anything, The Beatles' impact is because they were always expansive, opening possibilities, letting in more life and light.</p>
 				  <p>Like Bach, they pointed towards a new sonic landscape, which we have been exploring since.</p>
-				  <p>Not because they were conclusive, but because they opened the uncharted
+				  <p>Not because they were conclusive, but because they opened the uncharted to 
 				    those who followed. THAT is why they are The Beatles.</p>
 				</div>
 			</div>

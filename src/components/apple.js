@@ -40,7 +40,7 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
 			<div>
 			   <div className="flip-back darker" style={{boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				   border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
-				  <p>Apple Corps is the prototype for <a href="#" onClick={(e)=>{onNav('darkhorse')}}>Dark Horse</a>. A central group that supports a multitude of benevolent enterprises.</p>
+				  <p>Apple Corps was The Beatles umbrella company, designed to support a multitude of benevolent enterprises, from music and art to architecture and technology.</p>
 					<p>Listen/Watch here to see John Lennon and Paul McCartney explicitly describe the idea of supporting artists and inventors; creating a world
 					  of freedom inside the world of business: <a onClick={(e)=>{e.stopPropagation();}} target="_blank" href="https://www.youtube.com/watch?v=L_abWOyG16c">Apple Corp Interview</a></p>
 				  <p>A transcript for a similar interview is <a onClick={(e)=>{e.stopPropagation();}} target="_blank" href="http://www.beatlesinterviews.org/db1968.0514pc.beatles.html">here</a>. It doesn't get much clearer than that.</p>

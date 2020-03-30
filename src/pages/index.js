@@ -19,6 +19,7 @@ import AppleComputer from "../components/apple-computer";
 import Yogi from "../components/yogi";
 import Belinda from "../components/belinda";
 import Music from "../components/music";
+import JavaWorld from "../components/javaworld";
 
 import Img from "gatsby-image";
 
@@ -72,14 +73,14 @@ export const query = graphql`
         }
       }
     },
-    steveBg: file(relativePath: { eq: "zen2.jpg" }) {
+    steveBg: file(relativePath: { eq: "yosemite.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     },
-    steve: file(relativePath: { eq: "steve3.png" }) {
+    steve: file(relativePath: { eq: "muir.jpg" }) {
       childImageSharp {
         fixed(width:301){
           ...GatsbyImageSharpFixed
@@ -128,7 +129,7 @@ export const query = graphql`
         }
       }
     },
-    applecomputerBg: file(relativePath: { eq: "apple-hq.webp" }) {
+    applecomputerBg: file(relativePath: { eq: "silk-roads-map.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid
@@ -142,7 +143,7 @@ export const query = graphql`
         }
       }
     },
-    yogiBg: file(relativePath: { eq: "matt.png" }) {
+    yogiBg: file(relativePath: { eq: "sky.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid
@@ -308,7 +309,7 @@ const Main = ({ className, data }) => {
   	  <Music data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="6" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
 
   	  <AppleComputer data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="7" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
-  	  <Apple data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="8" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
+  	  <JavaWorld data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="8" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
   	  <Beatles data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="9" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
 
       <div className="nav-holder">

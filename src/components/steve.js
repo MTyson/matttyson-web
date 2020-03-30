@@ -41,11 +41,10 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
 			   <div className="flip-back darker" style={{
 				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
-				  <p>Iconic enterpreneur Steve Jobs needs no introduction.</p>
-				  <p>His favorite book was <a href="#" onClick={(e)=>{e.preventDefault();onNav('yogananda')}}>Yogananda's</a> autobiography and he practiced Zen.</p>
-				  <p>He famously said he modelled his business after <a href="">The Beatles</a>.</p>
-				  <p>He also... was influenced by them in choosing the Apple name.</p>
-				  <p>Apple Holdings was prevented from entering the tech space as a result of the ensuing dispute.</p>
+				  <p>John Muir was instrumental in creating Yosemite National Park and in introducing the idea of conservation to the world at large.</p>
+				  <p>Born in Scottland, he was an inventor and roaming adventurer before becoming a renowned naturalist and writer.</p>
+				  <p>Among other accomplishments, Muir was at the forefront in developing the glaciar theory of erosion. (Look at the picture of Yosemite!)</p>
+				  <p>Teddy Roosevelt and Ralph Waldo Emerson both visited with Muir in the wilds of Yosemite.</p>
 				</div>
 			</div>
         </FlipCard>
@@ -54,7 +53,7 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
     </BackgroundImage>
   )
 }
-
+// <p>He said, of writing, it is "a weak instrument for the reality he wished to convey."</p>
 export default George;
 /*
 <AiOutlineUp className="main-nav" style={{top:`5px`, transform: `scale(3,1)`}} data-sal="slide-down" data-sal-delay="750" data-sal-easing="ease"

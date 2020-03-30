@@ -41,7 +41,10 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
 			   <div className="flip-back darker" style={{
 				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`,textAlign:'center'}}>
-				  <p>https://www.goodreads.com/book/show/25812847-the-silk-roads</p>
+          <p>This panel is for the most recent book that blew my mind: <a href="https://www.goodreads.com/book/show/25812847-the-silk-roads" target="_blank">The Silk Roads: A New History of the World</a>, by Peter Frankopan (2015).</p>
+          <p>Frankopan takes the map, centers it on the Caspian Sea region, and then tells the story of world history, beginning with Hammurabi.</p>
+          <p>Sweeps seemlessly from huge geographical and temporal vistas to intimate life-on-the-ground details.</p>
+          <p>Unravels a multitude of nagging questions about why things went the way they did.</p>
 					{/*<p>Technology is a wonderful servant, and a terrible master.</p>*/}
 				</div>
 			</div>
