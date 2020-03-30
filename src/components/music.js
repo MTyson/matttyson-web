@@ -26,26 +26,27 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
   const navSize = "75px";
   const halfNavSize = (navSizeNum / 2) + "px";
   return (
-    <BackgroundImage Tag="section" className={className} fluid={data.beatlesBg.childImageSharp.fluid} backgroundColor={`#E8D195`}
+    <BackgroundImage Tag="section" className={className} fluid={data.georgeBg.childImageSharp.fluid} backgroundColor={`#E8D195`}
       style={{height:'100vh', width:`100vw`, display: `flex`, justifyContent:`center`, alignItems:`center`, backgroundSize:'cover',
 		  backgroundPosition: 'center center'}}>
         <div>
           <FlipCard show={flipCard} onClick={(e) => {e.preventDefault(); onFlip(); return false;}}>
             <div>
-			   <Img fixed={data.beatles.childImageSharp.fixed} style={{ height:'444px',width:'301px',
+			   <Img fixed={data.george.childImageSharp.fixed} style={{ height:'444px',width:'301px',
 				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				border: `5px double #000000`, borderRadius: `10px`}}
 				imgStyle={{ objectFit: "cover" }} />
             </div>
 			<div>
-			   <div className="flip-back darker" style={{
+			   <div className="flip-back" style={{
 				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
-				  <p>It's pretty easy to pass over The Beatles as over-exposed.</p>
-				  <p>To me, more than anything, The Beatles' impact is because they were always expansive, opening possibilities, letting in more life and light.</p>
-				  <p>Like Bach, they pointed towards a new sonic landscape, which we have been exploring since.</p>
-				  <p>Not because they were conclusive, but because they opened the uncharted
-				    those who followed. THAT is why they are The Beatles.</p>
+				  <p>Guitar and songwriting helps keep me sane (especially when sheltering in place :)</p>
+				  <p>Some of my favorites are (usual suspects) like The Beatles, Tom Petty, The Bobs (Marley and Dylan) and Neil Young.</p>
+				  <p>But I love old stuff like Bach, too.</p>
+				  <p>And obscure stuff like Nepali Trekking songs.</p>
+				  <p>And pretty much everything, really.</p>
+				  <p>Hit me with music, anytime.</p>
 				</div>
 			</div>
         </FlipCard>

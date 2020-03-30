@@ -18,6 +18,7 @@ import Beatles from "../components/beatles";
 import AppleComputer from "../components/apple-computer";
 import Yogi from "../components/yogi";
 import Belinda from "../components/belinda";
+import Music from "../components/music";
 
 import Img from "gatsby-image";
 
@@ -43,28 +44,28 @@ import { GiPadlock } from 'react-icons/gi';
 
 export const query = graphql`
   query {
-    logo: file(relativePath: { eq: "dh-logo-2.jpg" }) {
+    logo: file(relativePath: { eq: "matt6.jpg" }) {
       childImageSharp {
         fixed(width:301){
           ...GatsbyImageSharpFixed
         }
       }
     },
-    bg: file(relativePath: { eq: "slate.jpg" }) {
+    bg: file(relativePath: { eq: "bixby2.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     },
-    georgeBg: file(relativePath: { eq: "sky.jpg" }) {
+    georgeBg: file(relativePath: { eq: "guitar1.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     },
-    george: file(relativePath: { eq: "george2.png" }) {
+    george: file(relativePath: { eq: "tangled2.jpg" }) {
       childImageSharp {
         fixed(width:301){
           ...GatsbyImageSharpFixed
@@ -134,7 +135,7 @@ export const query = graphql`
         }
       }
     },
-    applecomputer: file(relativePath: { eq: "newton.jpg" }) {
+    applecomputer: file(relativePath: { eq: "silk-roads.jpg" }) {
       childImageSharp {
         fixed(width:301){
           ...GatsbyImageSharpFixed
@@ -148,21 +149,21 @@ export const query = graphql`
         }
       }
     },
-    yogi: file(relativePath: { eq: "OM.png" }) {
+    yogi: file(relativePath: { eq: "mailbox.jpg" }) {
       childImageSharp {
         fixed(width:301){
           ...GatsbyImageSharpFixed
         }
       }
     }
-    belindaBg: file(relativePath: { eq: "belinda.jpg" }) {
+    mediumBg: file(relativePath: { eq: "medium-bg.png" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     },
-    belinda: file(relativePath: { eq: "belinda.jpg" }) {
+    medium: file(relativePath: { eq: "medium2.jpg" }) {
       childImageSharp {
         fixed(width:301){
           ...GatsbyImageSharpFixed
@@ -304,7 +305,7 @@ const Main = ({ className, data }) => {
 
   	  <Steve data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="4" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
   	  <Unicorn data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="5" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
-  	  <George data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="6" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
+  	  <Music data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="6" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
 
   	  <AppleComputer data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="7" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>
   	  <Apple data={data} onNav={(whereTo)=>{navigate(whereTo)}} ordinal="8" flipCard={flipCard} onFlip={()=>{setFlipCard(!flipCard)}}/>

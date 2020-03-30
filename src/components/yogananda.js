@@ -41,10 +41,12 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
       			   <div className="flip-back darker" style={{
       				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
       				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
-      				  <p>Yogananda is the person most responsible for the ongoing, fecund dialog of East and West.</p>
-      				  <p>He brought Yoga to the United States, and brought the United States to India.</p>
-      				  <p>The author of Autobiography of a Yogi, he has exerted a powerful influence on a diverse range of people, including Steve Jobs.</p>
-      				  <p>Yogananda bridges from the realms of the immortal masters to our troubled world of conflict.</p>
+      				  <p>Yogananda is a great unifier of spiritual traditions.</p>
+      				  <p>He brought Yoga to the United States, and the United States to India (including in the form of a <a href="#"
+						 onClick={(e)=>{e.preventDefault(); e.stopPropagation(); alert("In 1936, Yogananda voyaged from America back to India (via Europe, visiting among other places, Socrates' prison cell).");}}>Ford Motorcar</a>).</p>
+      				  <p>The author of Autobiography of a Yogi, and <a href="#" onClick={(e)=>{e.preventDefault(); e.stopPropagation(); alert("Including multi-volume commentaries on The Baghadvadgita, the New Testament, and The Rubaiyat.");}}>numerous other works</a>
+						, he has exerted a powerful influence on a diverse range of people, including Steve Jobs.</p>
+      				  <p>Yogananda is the most expansive spiritual philosopher of the 20th century, and I'm damn glad he took the enormous effort to output such a cannon.</p>
       				</div>
 			</div>
         </FlipCard>

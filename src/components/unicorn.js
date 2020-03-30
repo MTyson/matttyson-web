@@ -56,20 +56,22 @@ const Unicorn = ({ className, data, onNav, flipCard, onFlip }) => {
       style={{height:'100vh', width:`100vw`, display: `flex`, justifyContent:`center`, alignItems:`center`}}>
       <FlipCard disabled={true} onKeyDown={handleKeyDown} show={flipCard} onClick={(e) => {e.preventDefault(); onFlip(); return false;}}>
         <div>
-			    <Img fixed={data.logo.childImageSharp.fixed} style={{
+			    <Img fixed={data.logo.childImageSharp.fixed} style={{ width:'301px', height:"444px",
 				    boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				    border: `5px double #000000`, borderRadius: `10px`}}
-				    imgStyle={{ objectFit: "cover" }} />
+				    imgStyle={{ objectFit: "contain" }} />
         </div>
     		<div>
     		   <div className="flip-back" style={{ boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
     			     border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
-    			  <h3 style={{fontFamily: "garamond"}}>This website tells a tale</h3>
-            <p>You will recognize some of the players.</p>
-    			  <p>Dark Horse is writing the next chapter of the story.</p>
-    			  <p>Dark Horse and its projects bring together all the threads: music, spirit and technology.</p>
-    			  <p>Explore freely. It all arrives at the same place: <b>planetary renewal</b>.</p>
-            <p>You can start by meeting the <a href="#" onClick={(e)=>{ e.preventDefault(); onNav('right')}}>Original Dark Horse</a>.</p>
+    			  <h3 style={{fontFamily: "garamond"}}>Matt Tyson</h3>
+            <p>(Hates to have his picture taken.)</p>
+    			  <p>CEO of <a href="www.wholisticsoftware.com" target="_blank">Wholistic Software</a></p>
+    			  <p>CTO at <a href="www.darkhorse.tech" target="_blank">Dark Horse Group</a></p>
+    			  <p>Built this site as an experiment to see if the navigation and animation will work.</p>
+            <p>Lives in Big Sur.</p>
+            <p><a href="mailto:matthewcarltyson@gmail.com">matthewcarltyson@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/matt444/" target="_blank" onClick={(e)=>{e.stopPropagation()}}>matt444</a></p>
     			</div>
     		</div>
       </FlipCard>

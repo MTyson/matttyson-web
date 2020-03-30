@@ -26,27 +26,28 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
   const navSize = "75px";
   const halfNavSize = (navSizeNum / 2) + "px";
   return (
-    <BackgroundImage Tag="section" className={className} fluid={data.beatlesBg.childImageSharp.fluid} backgroundColor={`#E8D195`}
+    <BackgroundImage Tag="section" className={className} fluid={data.yoganandaBg.childImageSharp.fluid} backgroundColor={`#E8D195`}
       style={{height:'100vh', width:`100vw`, display: `flex`, justifyContent:`center`, alignItems:`center`, backgroundSize:'cover',
 		  backgroundPosition: 'center center'}}>
         <div>
           <FlipCard show={flipCard} onClick={(e) => {e.preventDefault(); onFlip(); return false;}}>
             <div>
-			   <Img fixed={data.beatles.childImageSharp.fixed} style={{ height:'444px',width:'301px',
-				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
-				border: `5px double #000000`, borderRadius: `10px`}}
-				imgStyle={{ objectFit: "cover" }} />
-            </div>
-			<div>
-			   <div className="flip-back darker" style={{
-				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
-				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
-				  <p>It's pretty easy to pass over The Beatles as over-exposed.</p>
-				  <p>To me, more than anything, The Beatles' impact is because they were always expansive, opening possibilities, letting in more life and light.</p>
-				  <p>Like Bach, they pointed towards a new sonic landscape, which we have been exploring since.</p>
-				  <p>Not because they were conclusive, but because they opened the uncharted
-				    those who followed. THAT is why they are The Beatles.</p>
-				</div>
+      			   <Img fixed={data.yogananda.childImageSharp.fixed} style={{ height:'444px',width:'301px',
+      				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
+      				border: `5px double #000000`, borderRadius: `10px`}}
+      				imgStyle={{ objectFit: "contain" }} />
+                  </div>
+      			<div>
+      			   <div className="flip-back darker" style={{
+      				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
+      				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`, textAlign:'center'}}>
+      				  <p>JavaWorld has published a multitude of my articles since 2007, covering all aspects of Java and related technologies (One of the most-read authors at JavaWorld in 2019, over 300,000 views).</p>
+					  <p><a href="https://www.javaworld.com/author/Matthew-Tyson/">Author Page</a></p>
+					  <p><a href="https://www.javaworld.com/article/3444936/what-is-spring-component-based-development-for-java.html">The Spring Framework</a></p>
+					  <p><a href="https://www.javaworld.com/article/2071889/what-is-service-oriented-architecture.html">Service Oriented Architecture</a></p>
+					  <p><a href="https://www.javaworld.com/article/3296360/what-is-the-jdk-introduction-to-the-java-development-kit.html">The JDK</a></p>
+					  <p><a href=">https://www.javaworld.com/article/3379043/what-is-jpa-introduction-to-the-java-persistence-api.html">The API</a></p>
+      				</div>
 			</div>
         </FlipCard>
         </div>

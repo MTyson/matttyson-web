@@ -26,13 +26,13 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
   const navSize = "75px";
   const halfNavSize = (navSizeNum / 2) + "px";
   return (
-    <BackgroundImage Tag="section" className={className} fluid={data.georgeBg.childImageSharp.fluid} backgroundColor={`#E8D195`}
+    <BackgroundImage Tag="section" className={className} fluid={data.mediumBg.childImageSharp.fluid} backgroundColor={`#E8D195`}
       style={{height:'100vh', width:`100vw`, display: `flex`, justifyContent:`center`, alignItems:`center`, backgroundSize:'cover',
 		  backgroundPosition: 'center center'}}>
         <div>
           <FlipCard show={flipCard} onClick={(e) => {e.preventDefault(); onFlip(); return false;}}>
             <div>
-			   <Img fixed={data.belinda.childImageSharp.fixed} style={{ height:'444px',width:'301px',
+			   <Img fixed={data.medium.childImageSharp.fixed} style={{ height:'444px',width:'301px',
 				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				border: `5px double #000000`, borderRadius: `10px`}}
 				imgStyle={{ objectFit: "cover" }} />
@@ -41,12 +41,14 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
 			   <div className="flip-back" style={{
 				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`,  textAlign:'center'}}>
-				  <p>Belinda is the Founder of darkhorse.tech</p>
-				  <p>She is a healer and shaman drawing on global traditions, including her Cherokee and Irish heritage.</p>
-				  <p>She has worked with many iconic figures, like John Denver, Michael Jackson and Wayne Dyer.</p>
-				  <p>Belinda is the fierce center of the movement, the interface between the realms of transcendence and the everyday.</p>
-          <p>The Bindi, we sometimes call her.</p>
-          <p>Don't mess with The Bindi.</p>
+				  <p>Medium is an open publication platform.</p>
+				  <p>I appreciate the directness of the technology and the intelligence of the community.</p>
+				  <p>I've written <a href="https://medium.com/@matthewcarltyson">a ton of technical articles</a> at Medium (and they've been picked up by several publications like JavaScript in Plain English, The Startup and Better Programming).</p>
+				  <p>A few examples:</p>
+				  <p><a href="https://medium.com/swlh/what-why-when-microservices-4c5797c319d8">MicroServices</a> / &nbsp;
+				    <a href="https://medium.com/javascript-in-plain-english/preview-reactjs-concurrent-mode-f6eb81fa6216">ReactJS</a> / &nbsp;
+				    <a href="https://medium.com/swlh/why-java-remains-a-champion-a1e0809f0f53">Java</a> / &nbsp;
+					<a href="https://medium.com/better-programming/the-universal-function-2e3b3fa063e6">Functional Programming</a></p>
 				</div>
 			</div>
         </FlipCard>
@@ -54,7 +56,9 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
     </BackgroundImage>
   )
 }
-
+//https://medium.com/javascript-in-plain-english
+//https://medium.com/swlh
+//https://medium.com/better-programming
 export default George;
 /*
 <AiOutlineUp className="main-nav" style={{top:`5px`, transform: `scale(3,1)`}} data-sal="slide-down" data-sal-delay="750" data-sal-easing="ease"

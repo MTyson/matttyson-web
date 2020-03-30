@@ -41,11 +41,7 @@ const George = ({ className, data, onNav, flipCard, onFlip }) => {
 			   <div className="flip-back darker" style={{
 				boxShadow: `0px 10px 15px 5px rgba(0,0,0,0.85),0px 9px 25px 16px rgba(0,0,0,0.25)`,
 				border: `5px double #000000`, borderRadius: `10px`, height:'444px', width:`301px`,textAlign:'center'}}>
-				  <p>Apple computer began life as the venue for Steve Jobs to bring his counter-culture sensibility to technology.</p>
-          <p>Let's say that Apple's name, founded in 1976, was heavily ...influenced... by the Beatles' <a href="#" onClick={(e)=>{e.preventDefault();onNav('apple')}}>Apple Corp</a>, founded 1968.</p>
-          <p>Observe the decades long struggle between Apple Corps and Apple Computer.</p>
-          <p>Apple Corps was tech in service of humanity, Apple computer is something different.</p>
-					<p>Let us return to the authentic human-based love of creation.</p>
+				  <p>https://www.goodreads.com/book/show/25812847-the-silk-roads</p>
 					{/*<p>Technology is a wonderful servant, and a terrible master.</p>*/}
 				</div>
 			</div>
