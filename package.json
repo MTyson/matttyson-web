@@ -26,7 +26,7 @@
     "react-icons": "^3.9.0",
     "react-remove-scroll": "^2.2.0",
     "react-transition-group": "^4.3.0",
-    "three": "^0.113.2"
+    "three": "^0.137.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
